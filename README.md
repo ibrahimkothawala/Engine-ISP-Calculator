@@ -13,3 +13,8 @@ There are two diffrent methods that this calculator uses to determine the maximu
 They both utilize Cantera to calculate the thermodynamic properties of the gas. Cantera utilizes cti files to store  the NASA polynomials that are used to estimate the thermydynamic properties. The cti file in this repository is the gri30_highT. 
 
 ### First Method: Constant Entropy and Constant Specific Heat
+This method assumes an isentropic process and that the specific heat of the gasses is constant after the reactants have been combusted. It first calculates the temperature at the inlet of engine (after reactants have been combusted) and the temperature at the nozzle exit. Then determines the enthalpy change using the specfic heat. After, it sets the change in enthalpy equal to the kinetic energy change and solves for the exit velocity. 
+
+### Second Method: Constant Entropy
+This method assumes only an isentropic process after the reactatns have been combusted. It calculates the entropy at the inlet of the engine and uses that entropy and the nozzle exit pressure to determine the enthalpy change. Which is then used to calcuate the exit velocity. 
+
