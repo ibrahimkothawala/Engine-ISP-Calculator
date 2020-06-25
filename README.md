@@ -18,3 +18,8 @@ This method assumes an isentropic process and that the specific heat of the gass
 ### Second Method: Constant Entropy
 This method assumes only an isentropic process after the reactatns have been combusted. It calculates the entropy at the inlet of the engine and uses that entropy and the nozzle exit pressure to determine the enthalpy change. Which is then used to calcuate the exit velocity. 
 
+## What is the Maximum ISP and how is it found
+
+
+## How to use Engine ISP Calculator
+The ISPCalculator.py contains all the neccessary functions to run the different methods. In addition, there are other functions that can be used to calculate the ISP of propellents at different inlet pressures (currently the exit pressure is assumed to be 1 atmosphere). Another function is there that utilizes multiprocessing in order to decrease program run time. It only reduces run time with very large datasets 
