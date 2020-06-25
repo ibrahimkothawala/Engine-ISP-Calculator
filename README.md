@@ -18,8 +18,11 @@ This method assumes an isentropic process and that the specific heat of the gass
 ### Second Method: Constant Entropy
 This method assumes only an isentropic process after the reactatns have been combusted. It calculates the entropy at the inlet of the engine and uses that entropy and the nozzle exit pressure to determine the enthalpy change. Which is then used to calcuate the exit velocity. 
 
-## What is the Maximum ISP and how is it found
-
+## What is the Maximum ISP and how is it found?
+In order to determine the best oxidizer to fuel mass ratio for the highest ISP, the ISP calculator is run at differnt oxidizer to mass fuel ratios. The maximum ISP is found in this series and the resulting oxidizer to mass fuel ratio is returned. 
 
 ## How to use Engine ISP Calculator
-The ISPCalculator.py contains all the neccessary functions to run the different methods. In addition, there are other functions that can be used to calculate the ISP of propellents at different inlet pressures (currently the exit pressure is assumed to be 1 atmosphere). Another function is there that utilizes multiprocessing in order to decrease program run time. It only reduces run time with very large datasets 
+The ISPCalculator.py contains all the neccessary functions to run the different methods. In addition, there are other functions that can be used to calculate the ISP of propellents at different inlet pressures (currently the exit pressure is assumed to be 1 atmosphere). Another function is there that utilizes multiprocessing in order to decrease program run time. It only reduces run time with very large datasets.
+
+## Reccomended Workflow
+Create a new python file for each new engine that needs the optimal ISP to be determined. Determine over which oxidizer to fuel mass ratios the ISP needs to be calculated and if needed which inlet pressures the engine is operating at or a series of potential inlet pressures for the engine. Import the ISPcalculator.py file and utilize the appropriate functions. 
